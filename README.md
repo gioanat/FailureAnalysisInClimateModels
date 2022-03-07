@@ -64,6 +64,6 @@ These dataset contains the ocean model perturbed parameters, which were selected
    - The integer variable "Study" indicate the ensable studies to which the instance belongs. It assumes one of the integer number among 1,2,3.
    - The integer variable "Run" is the row index. 
    - There are 18 POP2 parameters (real numbers), whose meanings and ranges are described both in our report and in the reference article.
-   - The binary variable "outcome" of interest, which is equal to 1 if the row is relating to a successful simulation, 0 if the row is associated to a failure.
+   - The binary variable "outcome" of interest is equal to 1 if the row is relating to a successful simulation, 0 if the row is associated to a failure.
 
 4. Missing data codes: The dataset does not contain Missing or NULL values.
