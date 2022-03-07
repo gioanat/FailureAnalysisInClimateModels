@@ -35,7 +35,7 @@ This README.md file was generated on 2021-04-15 by Gioana Teora (me) and Tommaso
 1. File List: 
    -  "FailureAnalysisInClimateModels_V9_20210415.Rmd": This is the Rmarkdown file which contains the code used for conducting our analysis.
    -  "FailureAnalysisInClimateModels_V9_20210415.html": The html version of "FailureAnalysisInClimateModels_V9_20210415.Rmd" which includes the R code and its output.
-   -  "pop_failures_V2_20210319": The analysed data set. All information about its structure and the original version of this dataset are available at link http://archive.ics.uci.edu/ml/datasets/Climate+Model+Simulation+Crashes#.
+   -  "pop_failures_V2_20210319.csv": The analysed data set. All information about its structure and the original version of this dataset are available at link http://archive.ics.uci.edu/ml/datasets/Climate+Model+Simulation+Crashes#.
    -  "references.bib": The bibtex file which contains all our quotes.
    -  "requirements.txt": The text file which contains the list of all specific packages that you need to excute our code.
    -  "Example_of_RSLS.png": An image that shows an example of how generating new synthetic data throughout the Relocating safe-level SMOTE technique, taken by    "Siriseriwan W and Sinapiromsaran K 2016 The effective redistribution for imbalance dataset : Relocating safe-level SMOTE with minority outcast handling. Chiang Mai Journal of Science. 1 234 46".
@@ -52,7 +52,7 @@ This README.md file was generated on 2021-04-15 by Gioana Teora (me) and Tommaso
 
 3. Instrument- or software-specific information needed to interpret the data: The analysis is carried out on RStudio, which is an Integrated Development Environment (IDE) for R. The R version used here is 4.0.0 with platform "x86_64-w64-mingw32". To execute code you need to install all packages listed in the "requirements.txt" file and the DMwR package that you must download from the R archive https://cran.r-project.org/src/contrib/Archive/DMwR/. Remember that some of the algorithms aformentioned use some random procedure. In order to make reproducible our experiment we have fix the seed. However, we have evidence that even if the seed is fixed, if you change platform or the R version, your results can be change. However, this fact should not change the overall results.
 
-## DATA-SPECIFIC INFORMATION FOR: [pop_failures_V2_20210319]
+## DATA-SPECIFIC INFORMATION FOR: [pop_failures_V2_20210319.csv]
 These dataset contains the ocean model perturbed parameters, which were selected by POP2 model developers. The dataset is provided at link http://archive.ics.uci.edu/ml/datasets/Climate+Model+Simulation+Crashes# and its variable are explained in the reference article: "Lucas, D. D., Klein, R., Tannahill, J., Ivanova, D., Brandon, S., Domyancic, D., and Zhang, Y.: Failure analysis of parameter-induced simulation crashes in climate models, Geosci. Model Dev. Discuss., 6, 585-623, 2013.".
 
 1. Number of variables: The number of columns is 21.
