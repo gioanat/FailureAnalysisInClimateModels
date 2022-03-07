@@ -1,0 +1,16 @@
+rmarkdown
+bookdown
+arsenal
+car
+caret
+dplyr
+DT
+e1071
+knitr
+plotly
+randomForest
+scales
+xts
+quantmod
+ROCR
+zoo
