@@ -26,7 +26,7 @@ This README.md file was generated on 2021-04-15 by Gioana Teora (me) and Tommaso
 
 1. Licensing: These data are freely aivalable for re-use.
 
-2. Data Source: All data/codes are available on Git Hub at the link (...).
+2. Data Source: All data/codes are available on Git Hub at the link https://github.com/gioanat/FailureAnalysisInClimateModels.
 
 3. Recommended Citation: The csv file "pop_failures_V2_20210319.csv" (POP stands for Parallel Ocean  Program) is a modified version (we delete some columns that we do not need for our analysis) of the dataset available at link http://archive.ics.uci.edu/ml/datasets/Climate+Model+Simulation+Crashes#. Please, to use it cite: "Lucas, D. D., Klein, R., Tannahill, J., Ivanova, D., Brandon, S., Domyancic, D., and Zhang, Y.: Failure analysis of parameter-induced simulation crashes in climate models, Geosci. Model Dev. Discuss., 6, 585-623, [Web Link], 2013. [[Web Link]]". Furthermore, the image "Example_of_RSLS.png" (RSLS stands for Relocating safe-level SMOTE) is taken by: "Siriseriwan W and Sinapiromsaran K 2016 The effective redistribution for imbalance dataset: Relocating safe-level SMOTE with minority outcast handling. Chiang Mai Journal of Science. 1 234 46". Please, cite it if you want to re-use this image. Finally, in the "references.bib" you can find the list of all our quotes.
    
