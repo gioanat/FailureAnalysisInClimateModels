@@ -1,8 +1,8 @@
 # Failure analysis of parameter-induced simulation crashes in climate models
 
-This README.md file was generated on 2021-04-15 by Gioana Teora (me) and Tommaso Toso.
+This README.md file was generated on 2022-03-07 by Gioana Teora.
 
-This report was carried out for the Data Spaces exam at Politecnico di Torino.
+This analysis was carried out for the Data Spaces exam at Politecnico di Torino.
 
 ## General information
 
@@ -37,10 +37,10 @@ This report was carried out for the Data Spaces exam at Politecnico di Torino.
 1. File List: 
    -  "FailureAnalysisInClimateModels_V9_20210415.Rmd": This is the Rmarkdown file which contains the code used for conducting our analysis.
    -  "FailureAnalysisInClimateModels_V9_20210415.html": The html version of "FailureAnalysisInClimateModels_V9_20210415.Rmd" which includes the R code and its output.
-   -  "pop_failures_V2_20210319.csv": The analysed data set. All information about its structure and the original version of this dataset are available at link http://archive.ics.uci.edu/ml/datasets/Climate+Model+Simulation+Crashes#.
+   -  "pop_failures_V2_20210319.csv": The analysed data set. All information about its structure and the original version of this dataset are available at link http://archive.ics.uci.edu/ml/datasets/Climate+Model+Simulation+Crashes# and in our report.
    -  "references.bib": The bibtex file which contains all our quotes.
    -  "requirements.txt": The text file which contains the list of all specific packages that you need to excute our code.
-   -  "Example_of_RSLS.png": An image that shows an example of how generating new synthetic data throughout the Relocating safe-level SMOTE technique, taken by    "Siriseriwan W and Sinapiromsaran K 2016 The effective redistribution for imbalance dataset : Relocating safe-level SMOTE with minority outcast handling. Chiang Mai Journal of Science. 1 234 46".
+   -  "Example_of_RSLS.png": An image that shows an example of how generating new synthetic data throughout the Relocating safe-level SMOTE technique. For more details see "Siriseriwan W and Sinapiromsaran K 2016 The effective redistribution for imbalance dataset : Relocating safe-level SMOTE with minority outcast handling. Chiang Mai Journal of Science. 1 234 46".
    
 2. Additional related data collected that was not included in the current data package: To excute our code you need to download also
   - the Citation Style Language file "2d-materials.cls" from https://editor.citationstyles.org/styleInfo/?styleId=http%3A%2F%2Fwww.zotero.org%2Fstyles%2F2d-materials, which is needed for generating the html version of our analysis;
@@ -50,12 +50,12 @@ This report was carried out for the Data Spaces exam at Politecnico di Torino.
 
 1. Description of methods used for collection/generation of data: The analysed dataset "pop_failures_V2_20210319" is a modified version of the relating dataset publicly available at link http://archive.ics.uci.edu/ml/datasets/Climate+Model+Simulation+Crashes#. Our dataset is derived from the latter by deleting the integer number present in all the 14-th , 15-th and 16-th columns from row 362 (heading included) to the end.
 
-2. Methods for processing the data: The aim of our research is to try to understand the relation between the probability of a simulation crash within the Parallel Ocean Program (POP2) component of the Community Climate System Model (CCSM4) and some of POP2 parameters. For this purpose, we will use some classification algorithms, namely Logistic Regression,  k-Nearest Neighbors (k-NN), Support-Vector Machines (SVM), Kernel-SVM and Random Forest, applied to the dataset "pop_failures_V2_20210319". Furthermore, since this dataset is unbalanced, we will use some sampling methods that can allow us to re-balance the dataset, i.e. Random Oversampling, SMOTE and Relocating Safe-Level SMOTE. At the end, all the generated model are tested and the results show that ths SVM classifier performs the best, regardless of the kernel or the training set used to train it.
+2. Methods for processing the data: The aim of our research is to try to understand the relation between the probability of a simulation crash within the Parallel Ocean Program (POP2) component of the Community Climate System Model (CCSM4) and some of POP2 parameters. For this purpose, we will use some classification algorithms, namely Logistic Regression,  k-Nearest Neighbors (k-NN), Support-Vector Machines (SVM), Kernel-SVM and Random Forest, and will apply them to the dataset "pop_failures_V2_20210319". Furthermore, since this dataset is unbalanced, we will use some sampling methods that can allow us to re-balance the dataset, i.e. Random Oversampling, SMOTE and Relocating Safe-Level SMOTE. At the end, all the generated model are tested and the results show that ths SVM classifier performs the best, regardless of the kernel or the training set used to train it.
 
-3. Instrument- or software-specific information needed to interpret the data: The analysis is carried out on RStudio, which is an Integrated Development Environment (IDE) for R. The R version used here is 4.0.0 with platform "x86_64-w64-mingw32". To execute code you need to install all packages listed in the "requirements.txt" file and the DMwR package that you must download from the R archive https://cran.r-project.org/src/contrib/Archive/DMwR/. Remember that some of the algorithms aformentioned use some random procedure. In order to make reproducible our experiment we have fixed the seed. However, we have evidence that even if the seed is fixed, if you change platform or the R version, your results can change. However, this fact should not change the overall results.
+3. Instrument- or software-specific information needed to interpret the data: The analysis is carried out on RStudio, which is an Integrated Development Environment (IDE) for R, an open-source free software for statistical computing.The R version used here is 4.0.0 with platform "x86_64-w64-mingw32". To execute code you need to install all packages listed in the "requirements.txt" file and the DMwR package that you must download from the R archive https://cran.r-project.org/src/contrib/Archive/DMwR/. Remember that some of the algorithms aformentioned use some random procedure. In order to make reproducible our experiment we have fixed the seed. However, we have evidence that even if the seed is fixed, if you change platform or the R version, your results can change. However, this fact should not change the overall results.
 
 ## DATA-SPECIFIC INFORMATION FOR: [pop_failures_V2_20210319.csv]
-These dataset contains the ocean model perturbed parameters, which were selected by POP2 model developers. The dataset is provided at link http://archive.ics.uci.edu/ml/datasets/Climate+Model+Simulation+Crashes# and its variable are explained in the reference article: "Lucas, D. D., Klein, R., Tannahill, J., Ivanova, D., Brandon, S., Domyancic, D., and Zhang, Y.: Failure analysis of parameter-induced simulation crashes in climate models, Geosci. Model Dev. Discuss., 6, 585-623, 2013.".
+These dataset contains the ocean model perturbed parameters, which were selected by POP2 model developers. The dataset is provided at link http://archive.ics.uci.edu/ml/datasets/Climate+Model+Simulation+Crashes# and its variable are explained in the reference article: "Lucas, D. D., Klein, R., Tannahill, J., Ivanova, D., Brandon, S., Domyancic, D., and Zhang, Y.: Failure analysis of parameter-induced simulation crashes in climate models, Geosci. Model Dev. Discuss., 6, 585-623, 2013.", where you can also find an another failure anlysis.
 
 1. Number of variables: The number of columns is 21.
 
